@@ -20,5 +20,10 @@ while True:
     if time_bound == "yes":
         reminder += " that requires immediate attention today!"
 
-    print(f"\nReminder: {reminder}")
+    print(f"Reminder: '{task}' is a {priority.upper()} priority task", end='')
+if time_bound == "yes":
+    print(" that requires immediate attention today!")
+else:
+    print("!")
+
 
