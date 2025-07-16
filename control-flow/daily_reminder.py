@@ -20,4 +20,5 @@ while True:
     if time_bound == "yes":
         reminder += " that requires immediate attention today!"
 
-    print(reminder)
+    print(f"\nReminder: {reminder}")
+
