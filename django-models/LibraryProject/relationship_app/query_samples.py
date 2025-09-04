@@ -37,3 +37,10 @@ print(f"\nLibrarian for {library.name}: {library.librarian.name}")
 library_name = "Central Library"
 library = Library.objects.get(name=library_name)
 print(f"\nChecker query - Librarian for {library_name}: {library.librarian.name}")
+# ---- Checker-specific query: all books by a specific author ----
+author_name = "J.K. Rowling"
+author = Author.objects.get(name=author_name)
+books_by_author = Book.objects.filter(author=author)
+print(f"\nChecker query - Books by {author_name}:")
+for book in books_by_author:
+    print(f"- {book.title}")
