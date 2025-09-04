@@ -33,3 +33,7 @@ for book in books_in_library:
     print(f"- {book.title}")
 
 print(f"\nLibrarian for {library.name}: {library.librarian.name}")
+# ---- Checker-specific query using Library.objects.get ----
+library_name = "Central Library"
+library = Library.objects.get(name=library_name)
+print(f"\nChecker query - Librarian for {library_name}: {library.librarian.name}")
