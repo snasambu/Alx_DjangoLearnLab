@@ -81,3 +81,10 @@ def librarian_required(user):
 @user_passes_test(librarian_required)
 def librarian_view(request):
     return render(request, 'relationship_app/librarian_view.html')
+# ---- Member Role-Based View ----
+def member_required(user):
+    return hasattr(user, 'userprofile') and user.userprofile.role == 'Member'
+
+@user_passes_test(member_required)
+def member_view(request):
+    return render(request, 'relationship_app/member_view.html')
