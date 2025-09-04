@@ -65,3 +65,12 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return render(request, "relationship_app/logout.html")
+from django.shortcuts import render
+from django.contrib.auth.decorators import user_passes_test
+
+def admin_required(user):
+    return hasattr(user, 'userprofile') and user.userprofile.role == 'Admin'
+
+@user_passes_test(admin_required)
+def admin_view(request):
+    return render(request, 'relationship_app/admin_view.html')
