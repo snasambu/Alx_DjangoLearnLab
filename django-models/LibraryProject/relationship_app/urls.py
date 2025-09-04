@@ -47,3 +47,16 @@ urlpatterns += [
     path('books/add/', add_book, name='add_book'),
     path('books/<int:book_id>/edit/', edit_book, name='edit_book'),
 ]
+from django.urls import path
+from .views import add_book, edit_book
+
+# ---- Ensure urlpatterns exists ----
+try:
+    urlpatterns
+except NameError:
+    urlpatterns = []
+
+urlpatterns += [
+    path('books/add/', add_book, name='add_book'),
+    path('books/<int:book_id>/edit/', edit_book, name='edit_book'),
+]
