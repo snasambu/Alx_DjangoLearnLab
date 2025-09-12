@@ -128,4 +128,8 @@ AUTH_USER_MODEL = 'bookshelf.CustomUser'
 # AUTH_USER_MODEL = 'users.CustomUser'
  # replace 'yourappname' with your app folder name
 AUTH_USER_MODEL = 'users.CustomUser'
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
+
 

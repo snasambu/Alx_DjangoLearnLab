@@ -1,21 +1,21 @@
+from django.contrib.auth.models import AbstractUser, Group, Permission
 from django.db import models
+from .managers import CustomUserManager  # Import the custom manager
 
-# Create your models here.
-from django.contrib.auth.models import AbstractUser
-from django.db import models
-from django.utils.translation import gettext_lazy as _
 
 class CustomUser(AbstractUser):
-    date_of_birth = models.DateField(null=True, blank=True)
-    profile_photo = models.ImageField(upload_to='profile_photos/', null=True, blank=True)
-
+    # Add related_name to avoid clashes
     groups = models.ManyToManyField(
-        'auth.Group',
-        related_name='custom_users',
-        blank=True,
+        Group,
+        related_name='bookshelf_user_set',  # Changed related name
+        blank=True
     )
     user_permissions = models.ManyToManyField(
-        'auth.Permission',
-        related_name='custom_users_permissions',
-        blank=True,
+        Permission,
+        related_name='bookshelf_user_permissions_set',  # Changed related name
+        blank=True
     )
+
+    objects = CustomUserManager()
+    
+
