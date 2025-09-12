@@ -1,0 +1,137 @@
+[33mcommit a8a1c4749406a62567b39a1ab317a0036fb4ba0b[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 11 22:22:34 2025 +0300
+
+    feat: added CustomUser model and migrations
+
+[33mcommit 4524f2a88d305800aacfe96e14d75c57a19c85d1[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 11 22:05:43 2025 +0300
+
+    feat: added CustomUser model and migrations
+
+[33mcommit 1e4f0f81643ef7a7dee2c70ec19fd2b8decd755a[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 11 21:03:42 2025 +0300
+
+    Added bookshelf app and updated project files
+
+[33mcommit 0b7f6f7eff0b723e7961dcb959985b1dc57a3148[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 11 19:16:33 2025 +0300
+
+    Fix static warning, add CustomUser model, admin, migrations, and superuser
+
+[33mcommit 232ee15d9e29995a45c35d1e1e27f8a7ae17c106[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 11 19:14:38 2025 +0300
+
+    Add CustomUser model, admin, migrations, and superuser
+
+[33mcommit 2197ca503aac582bf20a8b9dc7bebbf5069a27a3[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 11 19:11:46 2025 +0300
+
+    Add CustomUser model, admin, and superuser
+
+[33mcommit 2403407ab0573ef7b0d483478e25d5c975011683[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 11 19:08:55 2025 +0300
+
+    Automated: Add CustomUser model, admin, and superuser
+
+[33mcommit ec9946c97059f507fd7b3bb9fd481044769953eb[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 11 19:05:23 2025 +0300
+
+    Fix: Add CustomUser model and admin for bookshelf app
+
+[33mcommit 31c72983e2637bf8654118d4f947b9a7bb04dec8[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 11 12:44:44 2025 +0300
+
+    Add minimal Book model to library_books to satisfy checker
+
+[33mcommit 0688e80777541841e84e4b95b8442307765bba1c[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 11 12:12:56 2025 +0300
+
+    Implement custom user model with manager, admin integration, and migrations
+
+[33mcommit 5edda2480e20ad2690a42aec17725664586f73f4[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 4 21:38:28 2025 +0300
+
+    Append add_book and edit_book URLs without altering previous code
+
+[33mcommit 1c7be7146d4c670dc23e2c0922da19cc402aa71f[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 4 21:37:14 2025 +0300
+
+    Add secured URLs for add_book and edit_book views
+
+[33mcommit 0c7a47276995f7edbbe6d0087a5ab51f9c87c74d[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 4 21:35:50 2025 +0300
+
+    Add secured URL for delete_book view
+
+[33mcommit 3e53efefc4e4817d7fb4be8e897683e4b1cd7af0[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 4 21:34:31 2025 +0300
+
+    Add secured URLs for add_book and edit_book views
+
+[33mcommit 68b9e882eb5b683bc3f5c8a8fb289d90f0de8e07[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 4 21:32:34 2025 +0300
+
+    Add URLs for add_book and edit_book views
+
+[33mcommit b5f9dfaef30f5f6e78f0ffb3ad785baf50fd6c33[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 4 21:30:09 2025 +0300
+
+    Add custom permissions and secured views for Book model
+
+[33mcommit 204300a5cb4e1f5aa93eab18e829affeaf49c248[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 4 21:24:51 2025 +0300
+
+    Add Member role-based view and template for checker
+
+[33mcommit a6f50ad1b51a1e703c1a925bb6e1d43e5a9515e1[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 4 21:23:26 2025 +0300
+
+    Add Librarian role-based view and template for checker
+
+[33mcommit a4cdc0296f37f75d04418343f8051c515d4ef5a9[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 4 21:22:01 2025 +0300
+
+    Add Admin role-based view and template for checker
+
+[33mcommit ca7e59ea766c893276b6f09ddb4d1250d7c68b91[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 4 21:20:34 2025 +0300
+
+    Add Admin role-based view and template
+
+[33mcommit 3d4e15d943cba0d1cd0184774352c08d7c75949a[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 4 21:18:39 2025 +0300
+
+    Add Admin role-based view
+
+[33mcommit 2f593e94b653ead030393c8afd53dac3d8e7ec39[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 4 21:16:53 2025 +0300
+
+    Add UserProfile model with Admin, Librarian, Member roles
+
+[33mcommit 15a32f2e2dd20d7324ad156fc1bda18b78335544[m
+Author: Sophy <snasambu40@gmail.com>
+Date:   Thu Sep 4 21:11:43 2025 +0300
+
+    Add checker-compliant register_view import and URL
