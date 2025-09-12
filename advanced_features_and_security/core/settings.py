@@ -94,3 +94,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Use the custom user model
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
+# Media files (profile photos, uploads, etc.)
+MEDIA_URL = "/media/"
+import os
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
