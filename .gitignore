@@ -1,18 +1,10 @@
 # Python
-*.pyc
 __pycache__/
-*.pyo
-*.pyd
-*.sqlite3
+*.pyc
 
-# Environment
-env/
-venv/
-*.env
+# Virtual environment
+.venv/
 
-# Django
-*.log
-*.pot
-*.py[cod]
+# Django stuff
 db.sqlite3
-/staticfiles
+*.log

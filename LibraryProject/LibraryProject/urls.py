@@ -20,3 +20,35 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('relationship/', include('relationship_app.urls')),
+]
+from django.urls import path, include
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("Welcome to the LibraryProject!")
+
+urlpatterns = [
+    path('', home),  # Root URL
+    path('admin/', admin.site.urls),
+    path('relationship_app/', include('relationship_app.urls')),
+]
+path('roles/', include('relationship_app.urls_user_roles'))
+from django.urls import path, include
+from django.shortcuts import redirect
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('books/', include('relationship_app.urls')),  # your books URL
+    path('library/<int:pk>/', include('relationship_app.urls')),  # your library URL
+    path('relationship_app/', include('relationship_app.urls')),
+    
+    # Redirect root URL to books list
+    path('', lambda request: redirect('list_books')),  
+]
+
+
