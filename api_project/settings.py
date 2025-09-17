@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'api',  # your app
-    'rest_framework',  # add this
+    'rest_framework',
+    'rest_framework.authtoken',  # add this
     'rest_framework.authtoken',  # add this line
 ]
 
