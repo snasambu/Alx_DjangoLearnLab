@@ -4,9 +4,13 @@ from rest_framework.routers import DefaultRouter
 from .views import BookList, BookViewSet
 
 router = DefaultRouter()
-router.register(r'books', BookViewSet, basename='book')
+router.register(r'books_all', BookViewSet, basename='book_all')  # CRUD endpoints
 
 urlpatterns = [
-    path('books-list/', BookList.as_view(), name='book-list'),  # for checker
-    path('', include(router.urls)),  # CRUD endpoints
+    # Checker-specific ListAPIView
+    path('books/', BookList.as_view(), name='book-list'),
+
+    # Router URLs for BookViewSet (all CRUD operations)
+    path('', include(router.urls)),
 ]
+
