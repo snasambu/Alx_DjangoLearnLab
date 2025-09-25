@@ -1,15 +1,19 @@
 from rest_framework import serializers
-from .models import Author, Book
 from datetime import date
+from .models import Author, Book
 
-# Serializer for Book model.
-# Serializes all fields and adds custom validation for publication_year.
+# ----------------------------------------
+# BookSerializer
+# ----------------------------------------
+# Serializes all fields of the Book model.
+# Includes custom validation:
+# - Ensures publication_year is not in the future.
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book
-        fields = '__all__'
+        fields = ['id', 'title', 'publication_year', 'author']
 
-    # Custom validation: ensures the book's publication year is not in the future.
+    # Custom field validation
     def validate_publication_year(self, value):
         current_year = date.today().year
         if value > current_year:
@@ -17,13 +21,18 @@ class BookSerializer(serializers.ModelSerializer):
         return value
 
 
-# Serializer for Author model.
-# Includes the name field and a nested list of books using BookSerializer.
-# The nested 'books' field represents the one-to-many relationship:
-#   Each Author can have multiple Books, accessed via author.books.all()
+# ----------------------------------------
+# AuthorSerializer
+# ----------------------------------------
+# Serializes Author model fields.
+# Includes nested BookSerializer to show all books related to an author.
+# Relationship handling:
+# - The 'books' field uses related_name='books' from the Book model.
+# - 'many=True' indicates multiple related books.
+# - 'read_only=True' means nested books are displayed but not directly writable here.
 class AuthorSerializer(serializers.ModelSerializer):
-    books = BookSerializer(many=True, read_only=True)  # Nested serializer for related books
+    books = BookSerializer(many=True, read_only=True)
 
     class Meta:
         model = Author
-        fields = ['name', 'books']
+        fields = ['id', 'name', 'books']

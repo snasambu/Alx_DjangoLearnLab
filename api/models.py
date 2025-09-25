@@ -1,29 +1,38 @@
 from django.db import models
 
-# Author model represents a writer in our system.
+# ----------------------------------------
+# Author Model
+# ----------------------------------------
+# Represents a book author. 
 # Fields:
-# - name: The full name of the author.
-# Relationship:
-# - An Author can have multiple Books (one-to-many relationship).
+# - name: stores the author's full name.
+# Relationships:
+# - One-to-many with Book (an author can have multiple books)
 class Author(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)  # Author's name
 
     def __str__(self):
         return self.name
 
 
-# Book model represents a book written by an author.
+# ----------------------------------------
+# Book Model
+# ----------------------------------------
+# Represents a book written by an author.
 # Fields:
-# - title: The title of the book.
-# - publication_year: The year the book was published.
-# - author: ForeignKey linking the book to its author.
-# Relationship:
-# - Each Book belongs to a single Author.
-# - related_name="books" allows accessing all books of an author via author.books.all()
+# - title: the title of the book.
+# - publication_year: year the book was published.
+# - author: foreign key linking to an Author object.
+# Relationships:
+# - Many books can belong to one author.
 class Book(models.Model):
-    title = models.CharField(max_length=255)
-    publication_year = models.IntegerField()
-    author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name="books")
+    title = models.CharField(max_length=255)  # Book title
+    publication_year = models.IntegerField()  # Year of publication
+    author = models.ForeignKey(
+        Author, 
+        on_delete=models.CASCADE,      # Delete all books if the author is deleted
+        related_name='books'          # Allows reverse lookup: author.books.all()
+    )
 
     def __str__(self):
         return f"{self.title} ({self.publication_year})"
