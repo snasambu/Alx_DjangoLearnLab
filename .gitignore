@@ -1,0 +1,17 @@
+# Python compiled files
+*.pyc
+__pycache__/
+
+# Virtual environment
+venv/
+
+# SQLite database
+db.sqlite3
+
+# Django migrations compiled
+*/migrations/*.pyc
+*/migrations/__pycache__/
+
+# OS files
+.DS_Store
+Thumbs.db
