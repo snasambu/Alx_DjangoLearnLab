@@ -20,7 +20,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = 'django-insecure-#v!2l_&2g1380=jievyrcz@8tmy4oqzi7(jk6dgo7odh%1g4=v'
+=======
+SECRET_KEY = 'django-insecure-eouuif*c$uha!yty%@m%+n(ux1j(+$fm0x+)5emj&9$&x=1i-p'
+>>>>>>> 161c6cb (Initial commit: Django project with api app, models, and serializers)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,18 +35,25 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+<<<<<<< HEAD
    
+=======
+>>>>>>> 161c6cb (Initial commit: Django project with api app, models, and serializers)
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
 
     # Third-party apps
     'rest_framework',
 
     # Local apps
+=======
+    'rest_framework',
+>>>>>>> 161c6cb (Initial commit: Django project with api app, models, and serializers)
     'api',
 
 ]

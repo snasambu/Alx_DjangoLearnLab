@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Python compiled files
 *.pyc
 __pycache__/
@@ -15,3 +16,27 @@ db.sqlite3
 # OS files
 .DS_Store
 Thumbs.db
+=======
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Django
+db.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+__pycache__/
+local_settings.py
+media
+
+# VS Code
+.vscode/
+>>>>>>> 161c6cb (Initial commit: Django project with api app, models, and serializers)

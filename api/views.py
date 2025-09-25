@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework import generics, permissions, filters
 from rest_framework.exceptions import ValidationError
@@ -79,3 +80,8 @@ class BookDeleteView(generics.DestroyAPIView):`n    """`n    View for class Book
     queryset = Book.objects.all()
     serializer_class = BookSerializer
     # permission_classes = [permissions.IsAuthenticated]
+=======
+from django.shortcuts import render
+
+# Create your views here.
+>>>>>>> 161c6cb (Initial commit: Django project with api app, models, and serializers)

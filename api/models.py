@@ -1,5 +1,6 @@
 from django.db import models
 
+<<<<<<< HEAD
 # ----------------------------------------
 # Author Model
 # ----------------------------------------
@@ -35,4 +36,32 @@ class Book(models.Model):
     )
 
     def __str__(self):
+=======
+# The Author model represents an author of books.
+# Each author has a 'name' field to store their full name.
+class Author(models.Model):
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        # Returns the author's name when the object is printed
+        return self.name
+
+# The Book model represents a book written by an author.
+# Fields:
+# - title: the book's title
+# - publication_year: the year the book was published
+# - author: foreign key linking to the Author model
+#   This establishes a one-to-many relationship: one author can have multiple books.
+class Book(models.Model):
+    title = models.CharField(max_length=255)
+    publication_year = models.IntegerField()
+    author = models.ForeignKey(
+        Author,
+        on_delete=models.CASCADE,   # Delete all books if the author is deleted
+        related_name="books"        # Allows reverse access: author.books.all()
+    )
+
+    def __str__(self):
+        # Returns a string showing the book title and year
+>>>>>>> 161c6cb (Initial commit: Django project with api app, models, and serializers)
         return f"{self.title} ({self.publication_year})"
