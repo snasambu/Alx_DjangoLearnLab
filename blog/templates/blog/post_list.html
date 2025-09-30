@@ -1,0 +1,11 @@
+﻿{% extends "blog/base.html" %}
+{% block title %}All Posts{% endblock %}
+{% block content %}
+<h2>All Posts</h2>
+{% for post in posts %}
+<div>
+<h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
+<p>{{ post.content|slice:":200" }}...</p>
+</div>
+{% endfor %}
+{% endblock %}
